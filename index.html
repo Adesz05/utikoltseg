@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Útiköltseg</title>
+</head>
+<body>
+    <header>
+        <h1>Útiköltség elszámolás</h1>
+    </header>
+    <main>
+        <h3>Személyes adatok</h3>
+        <div class="kozeput">
+            <div class="balos">
+                <label for="name">Név: </label>
+                <br><br>
+                <label for="adress">Lakcím: </label>
+                <br><br>
+                <label for="birthdate">Születési dátum: </label>
+                <br><br>
+            </div>
+            <div class="jobbos">
+                <input type="text" name="name" id="name">
+                <br><br>
+                <input type="text" name="adress" id="adress">
+                <br><br>
+                <input type="date" name="birthdate" id="birthdate">
+                <br><br>
+            </div>
+        </div>
+
+
+        <h3>Gépjármű- és üzemanyagadatok</h3>
+        <div class="kozeput">
+            <div class="balos">
+                <label for="cartype">Gépjármű gyártmánya, típusa: </label>
+                <br><br>
+                <label for="fueltype">Üzemanyag fajtája: </label>
+                <br><br>
+                <label for="avgfuel">Fogyasztási norma: </label>
+                <br><br>
+                <label for="dateofjourney">Utazás dátuma: </label>
+                <br><br>
+                <label for="costoffuel">Üzemanyag egységára: </label>
+                <br><br>
+            </div>
+            <div class="jobbos">
+                <input type="text" name="cartype" id="cartype">
+                <br><br>
+                <select name="fueltype" id="fueltype">
+                    <option value="benzin">Benzin</option>
+                    <option value="gazolaj">Gázolaj</option>
+                </select>
+                <br><br>
+                <select name="avgfuel" id="avgfuel">
+                </select>
+                <br><br>
+                <input type="date" name="dateofjourney" id="dateofjourney">
+                <br><br>
+                <input type="number" name="costoffuel" id="costoffuel">Ft/l
+                <h6>Forrás: <a target="_blank" href="https://nav.gov.hu/hav/szolgaltatsok/uzemanyag/uzemanyagarak">https://nav.gov.hu/hav/szolgaltatsok/uzemanyag/uzemanyagarak</a></h6>
+                
+            </div>
+        </div>
+
+
+        <h3>A megtett út adatai</h3>
+        <div class="kozeput">
+            <div class="balos">
+                <label for="starterpos">Kiindulási hely: </label>
+                <br><br>
+                <label for="destination">Úticél: </label>
+                <br><br>
+                <label for="otherdestination">További úticél: </label>
+                <br><br>
+                <label for="numberofkilometers">Összes megtett távolság <br>Google Maps alapján: </label>
+                <br><br>
+            </div>
+            <div class="jobbos">
+                <input type="text" name="starterpos" id="starterpos">
+                <br><br>
+                <input type="text" name="destination" id="destination">
+                <br><br>
+                <input type="text" name="otherdestination" id="otherdestination">
+                <br><br>
+                <input type="number" name="numberofkilometers" id="numberofkilometers">km
+                <br><br>
+                <input type="submit" value="Ellenőrzés és számítás" id="check">
+            </div>
+        </div>
+        <hr>
+        
+        <div class="kozeput">
+            <div class="balos">
+                <p>Útiköltség:</p>
+                <p>Amortáció:</p>
+                <p style="font-weight: bold;">Összes elszámolható költség:</p>
+            </div>
+            <div class="jobbos">
+                <p id="priceofjourney"></p>Ft
+                <p id="amortization"></p>Ft
+                <p id="sum"></p>Ft
+                <br><br>
+                <input type="submit" value="Nyomtatás" id="print">
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="js/app.js"></script>
+</body>
+</html>

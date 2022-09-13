@@ -1,0 +1,13 @@
+body{
+    margin: 0 30% 0 30%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+.kozeput{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.balos{
+    padding-left: 25px;
+}
